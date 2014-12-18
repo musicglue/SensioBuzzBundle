@@ -112,6 +112,16 @@ class BuzzExtension extends Extension
             $definition->addMethodCall('setTimeout', array($timeout));
         }
 
+        $verifyPeer = $config['client']['verify_peer'];
+        if (null !== $verifyPeer) {
+            $definition->addMethodCall('setVerifyPeer', array($verifyPeer));
+        }
+
+        $verifyHost = $config['client']['verify_host'];
+        if (null !== $verifyHost) {
+            $definition->addMethodCall('setVerifyHost', array($verifyHost));
+        }
+
         $proxy = $config['client']['proxy'];
         if (null !== $proxy) {
             $definition->addMethodCall('setProxy', array($proxy));
