@@ -83,6 +83,9 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->scalarNode('name')->end()
                 ->scalarNode('timeout')->defaultNull()->end()
+                ->scalarNode('verify_peer')->defaultNull()->end()
+                ->scalarNode('verify_host')->defaultNull()->end()
+                ->scalarNode('timeout')->defaultNull()->end()
                 ->scalarNode('proxy')->defaultNull()->end()
             ->end()
         ;
